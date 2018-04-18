@@ -12,5 +12,13 @@ class Student {
 	public function getName () {
 		return $this->name;
 	}
+	public static function getInstance ($name) {
+		if(!self::$singletonObject) {
+			self::$singletonObject = new Student($name);
+		}
+		return self::$singletonObject;
+	}
 }
+
+
 ?>
