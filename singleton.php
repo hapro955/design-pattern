@@ -20,5 +20,9 @@ class Student {
 	}
 }
 
-
+$student = Student::getInstance("Nguyen Son Ha");
+echo "student: ".$student->getName()."</br>";
+$student2 = Student::getInstance("Nguyen Van Thien");
+$student2->setName("Nguyen Van Thien");
+echo "student: ".$student2->getName();
 ?>
