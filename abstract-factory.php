@@ -20,24 +20,6 @@ class Circle implements Shape {
 		echo "draw Circle";
 	}
 }
-class FactoryShape {
-	public function getShape($type) {
-		switch ($type) {
-			case Shape::SQUARE: 
-				return new Square();
-				break;
-			case Shape::RECTANGLE:
-				return new Rectangle();
-				break;
-			case Shape::Circle:
-				return new Circle();
-				break;
-			default:
-				return null;
-				break;
-		}
-	}
-}
 interface Color {
 	public function fill();
 }
@@ -56,22 +38,5 @@ class Blue implements Color {
 		echo "fill Blue";
 	}
 }
-class FactoryColor {
-	public function getColor ($color) {
-		switch (strtolower($color)) {
-			case 'red':
-				return new Red();
-				break;
-			case 'yellow':
-				return new Yellow();
-				break;
-			case 'blue':
-				return new Blue();
-				break;
-			default:
-				return null;
-				break; 
-		}
-	}
-}
+
 ?>
