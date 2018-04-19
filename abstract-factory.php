@@ -38,4 +38,7 @@ class FactoryShape {
 		}
 	}
 }
+interface Color {
+	public function fill();
+}
 ?>
