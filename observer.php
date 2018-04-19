@@ -35,8 +35,11 @@ class Account implements Subject {
 	}
 	public function notify () {
 		foreach($this->storage	as $observer) {
-			$observer->update($this);
+			$observer->update($this);	
 		}
+	}
+	public function save () {
+		$this->notify();
 	}
 }
 ?>
