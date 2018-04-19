@@ -5,7 +5,8 @@ interface UserInterface {
 }
 class User implements UserInterface {
 	private $name;
-	pubic function setName ($name) {
+
+	public function setName ($name) {
 		$this->name = $name;
 	}
 	public function getName () {
@@ -18,4 +19,21 @@ interface CustomerInterface {
 	public function setLastName($lname);
 	public function getLastName();
 }
+class Customer implements CustomerInterface {
+	private $firstName;
+	private $lastName;
+
+	public function setFirstName ($fname) {
+		$this->firstName = $fname;
+	}
+	public function getFirstName () {
+		return $firstName;
+	}
+	public function setLastName ($lname) {
+		$this->lastName = $lname;
+	}
+	public function getLastName () {
+		return $lastName;
+	}
+}	
 ?>
