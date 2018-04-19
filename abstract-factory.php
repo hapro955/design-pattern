@@ -44,4 +44,22 @@ abstract class AbstractFactory {
 	public function getShape () {} 
 	public function getColor () {}
 }
+class FactoryShape extends AbstractFactory {
+	public function getShape ($type) {
+		switch($type){
+			case Shape::SQUARE:
+				return new Square();
+				break;
+			case Shape::RECTANGLE:
+				return new Rectangle();
+				break;
+			case Shape::CIRCLE:
+				return new Circle();
+				break;
+			default: 
+				return null;
+				break; 
+		} 
+	}
+}
 ?>
