@@ -36,4 +36,17 @@ class Customer implements CustomerInterface {
 		return $lastName;
 	}
 }	
+class UserToCustomerAdapter implements CustomerInterface {
+	protected $user;
+	protected $firstName;
+	protected $lastName;
+
+	public function __construct (User $user) {
+		$this->user = $user;
+		$fullName = $this->user->getName();
+		$pieces = explode(" ", $fullName);
+		$this->firstName = $pieces[0];
+		$this->lastName = $pieces[1];
+	}
+}
 ?>
