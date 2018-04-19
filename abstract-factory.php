@@ -20,4 +20,22 @@ class Circle implements Shape {
 		echo "draw Circle";
 	}
 }
+class FactoryShape {
+	public function getShape($type) {
+		switch ($type) {
+			case Shape::SQUARE: 
+				return new Square();
+				break;
+			case Shape::RECTANGLE:
+				return new Rectangle();
+				break;
+			case Shape::Circle:
+				return new Circle();
+				break;
+			default:
+				return null;
+				break;
+		}
+	}
+}
 ?>
