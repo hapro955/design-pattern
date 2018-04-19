@@ -10,5 +10,9 @@ class Square implements Shape {
 		echo "draw Square";
 	}
 }
-
+class Rectangle implements Shape {
+	public function draw () {
+		echo "draw Rectangle";
+	}
+}
 ?>
