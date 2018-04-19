@@ -12,9 +12,13 @@ class Account implements Subject {
 	const LOGIN_FAILURE = 2; 
 	const LOGIN_IVALID = 3;
 	const EXPIRED = 4;
-
 	private $state;
 	private $storage;
 	private $data;
+
+	public function __construct() {
+		$this->storage =  array();
+		$this->data = array();
+	}
 }
 ?>
