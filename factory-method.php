@@ -39,4 +39,8 @@ class ShapeFactory {
 		}
 	}
 }
+
+$shapeFactory = new ShapeFactory();
+$shape = $shapeFactory->getShape(Shape::SQUARE);
+$shape->draw();
 ?>
