@@ -26,6 +26,12 @@ class Account implements Subject {
 			$this->storage[] = $observer;	
 		}
 	}
-	
+	public function detach(Observer $observer) {
+		foreach($this->storage as $key => $val) {
+			if($val == $observer) {
+				unser($this->storage[$key]);
+			}
+		}
+	}
 }
 ?>
