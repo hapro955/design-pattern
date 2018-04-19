@@ -47,5 +47,11 @@ class Account implements Subject {
 	public function getState () {
 		return $this->state;
 	}
+	public function setData ($data) {
+		$this->data = $data;
+	}
+	public function getData () {
+		return $this->data;
+	}
 }
 ?>
