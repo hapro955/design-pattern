@@ -20,5 +20,12 @@ class Account implements Subject {
 		$this->storage =  array();
 		$this->data = array();
 	}
+	public function attach (Observer $observer) {
+		$isContain = array_search($observer, $this->storage);
+		if($isContain == false) {
+			$this->storage[] = $observer;	
+		}
+	}
+	
 }
 ?>
