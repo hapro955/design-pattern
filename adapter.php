@@ -12,4 +12,10 @@ class User implements UserInterface {
 		return $name;
 	}
 }
+interface CustomerInterface {
+	public function setFirstName($fname);
+	public function getFirstName();
+	public function setLastName($lname);
+	public function getLastName();
+}
 ?>
