@@ -80,4 +80,16 @@ class FactoryColor extends AbstractFactory {
 		}
 	}
 }
+class FactoryProducer {
+	public static function getFactory ($choice) {
+		$choice = strtolower($choice);
+		if($choice == "shape") {
+			return new FactoryShape();
+		}else if($choice == "color") {
+			return new FactoryColor();
+		}
+		return null;
+	} 
+}
+
 ?>
