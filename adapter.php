@@ -48,5 +48,17 @@ class UserToCustomerAdapter implements CustomerInterface {
 		$this->firstName = $pieces[0];
 		$this->lastName = $pieces[1];
 	}
+	public function setFirstName ($fname) {
+		$this->firstName = $fname;
+	}
+	public function getFirstName () {
+		return $this->firstName;
+	}
+	public function setLastName ($lname) {
+		$this->lastName = $lname;
+	}
+	public function getLastName () {
+		return $this->lastName;
+	}
 }
 ?>
