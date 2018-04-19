@@ -20,6 +20,7 @@ class Circle implements Shape {
 		echo "draw Circle";
 	}
 }
+
 interface Color {
 	public function fill();
 }
@@ -39,4 +40,8 @@ class Blue implements Color {
 	}
 }
 
+abstract class AbstractFactory {
+	public function getShape () {} 
+	public function getColor () {}
+}
 ?>
