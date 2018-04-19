@@ -10,7 +10,7 @@ class User implements UserInterface {
 		$this->name = $name;
 	}
 	public function getName () {
-		return $name;
+		return $this->name;
 	}
 }
 interface CustomerInterface {
@@ -27,13 +27,13 @@ class Customer implements CustomerInterface {
 		$this->firstName = $fname;
 	}
 	public function getFirstName () {
-		return $firstName;
+		return $this->firstName;
 	}
 	public function setLastName ($lname) {
 		$this->lastName = $lname;
 	}
 	public function getLastName () {
-		return $lastName;
+		return $this->lastName;
 	}
 }	
 class UserToCustomerAdapter implements CustomerInterface {
@@ -45,8 +45,8 @@ class UserToCustomerAdapter implements CustomerInterface {
 		$this->user = $user;
 		$fullName = $this->user->getName();
 		$pieces = explode(" ", $fullName);
-		$this->firstName = $pieces[0];
-		$this->lastName = $pieces[1];
+		$this->firstName = $pieces[1];
+		$this->lastName = $pieces[0];
 	}
 	public function setFirstName ($fname) {
 		$this->firstName = $fname;
@@ -61,4 +61,11 @@ class UserToCustomerAdapter implements CustomerInterface {
 		return $this->lastName;
 	}
 }
+
+$user = new User();
+$user->setName("Son Ha");
+echo "User: ".$user->getName();
+
+$adapter = new UserToCustomerAdapter($user);
+echo "</br>Customer:</br> first Name: ".$adapter->getFirstName()."</br>last Name: ".$adapter->getLastName();	
 ?>
