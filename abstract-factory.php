@@ -62,4 +62,22 @@ class FactoryShape extends AbstractFactory {
 		} 
 	}
 }
+class FactoryColor extends AbstractFactory {
+	public function getColor ($color) {
+		switch(strtolower($color)){
+			case 'red':
+				return new Red();
+				break;
+			case 'yellow':
+				return new Yellow();
+				break;
+			case 'blue':
+				return new Blue();
+				break;
+			default:
+				return null;
+				break;
+		}
+	}
+}
 ?>
