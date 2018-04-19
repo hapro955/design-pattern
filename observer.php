@@ -53,5 +53,11 @@ class Account implements Subject {
 	public function getData () {
 		return $this->data;
 	}
+	public function process ($email) {
+		if($email == "hapro955@gmail.com") {
+			return true;
+		}
+		return false;
+	}
 }
 ?>
