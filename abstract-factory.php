@@ -92,4 +92,8 @@ class FactoryProducer {
 	} 
 }
 
+$factory = new FactoryProducer();
+$factoryShape = $factory->getFactory('shape');
+$square = $factoryShape->getShape(Shape::SQUARE);
+$square->draw();
 ?>
