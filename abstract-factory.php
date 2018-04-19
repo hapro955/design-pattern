@@ -56,4 +56,22 @@ class Blue implements Color {
 		echo "fill Blue";
 	}
 }
+class FactoryColor {
+	public function getColor ($color) {
+		switch (strtolower($color)) {
+			case 'red':
+				return new Red();
+				break;
+			case 'yellow':
+				return new Yellow();
+				break;
+			case 'blue':
+				return new Blue();
+				break;
+			default:
+				return null;
+				break; 
+		}
+	}
+}
 ?>
