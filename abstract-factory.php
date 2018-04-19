@@ -51,4 +51,9 @@ class Yellow implements Color {
 		echo "fill Yellow";
 	}
 }
+class Blue implements Color {
+	public function fill () {
+		echo "fill Blue";
+	}
+}
 ?>
