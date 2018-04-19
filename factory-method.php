@@ -5,4 +5,10 @@ interface Shape {
 	const RECTANGLE = 3;
 	public function draw();
 }
+class Square implements Shape {
+	public function draw () {
+		echo "draw Square";
+	}
+}
+
 ?>
