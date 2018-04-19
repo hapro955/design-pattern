@@ -41,4 +41,10 @@ class FactoryShape {
 interface Color {
 	public function fill();
 }
+class Red implements Color {
+	public function fill () {
+		echo "fill Red";
+	}
+}
+
 ?>
