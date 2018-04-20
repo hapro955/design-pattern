@@ -79,6 +79,12 @@ class Account implements Subject {
 	}
 }
 class Logger implements Observer {
-	
+	public function update(Account $account) {
+		$state = $account->getState();
+		$data = $account->getData();
+		if($state == Account::LOGIN_SECCESS) {
+			echo "User ".$data['email']." vua online";
+		}
+	}
 }
 ?>
