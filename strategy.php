@@ -21,17 +21,25 @@ class Electricity implements Fuel {
 abstract class Car {
 	protected $fuel;
 	abstract function display();
-	public function UseFuel(Fuel $fuel) {
+	public function UseFuel (Fuel $fuel) {
 		$this->fuel->material();
 	}
 }
 
-class GasolineCar extends Car {
-	public function __construct (){
+class GasolineCar extends Car { 
+	public function __construct () {
 		$this->fuel = new Gasoline();
 	}
-	public function display() {
+	public function display () {
 		echo "this is Gasoline Car</br>";
+	}
+}
+class ElectricityCar extends Car {
+	public function __construct () {
+		$this->fuel = new Electricity();
+	}
+	public function display () {
+		echo "this is Electricity Car</br>";
 	}
 }
 ?>
