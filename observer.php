@@ -78,6 +78,7 @@ class Account implements Subject {
 		$this->notify();
 	}
 }
+
 class Logger implements Observer {
 	public function update(Account $account) {
 		$state = $account->getState();
@@ -86,5 +87,9 @@ class Logger implements Observer {
 			echo "User ".$data['email']." vua online";
 		}
 	}
+}
+
+class Mailer implements Observer {
+	
 }
 ?>
