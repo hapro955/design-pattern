@@ -21,7 +21,7 @@ class Electricity implements Fuel {
 abstract class Car {
 	protected $fuel;
 	abstract function display();
-	public function UseFuel (Fuel $fuel) {
+	public function UseFuel () {
 		$this->fuel->material();
 	}
 }
@@ -43,5 +43,11 @@ class ElectricityCar extends Car {
 	}
 }
 
+$gasolineCar = new GasolineCar();
+$gasolineCar->display();
+$gasolineCar->UseFuel();
 
+$electricityCar = new ElectricityCar();
+$electricityCar->display();
+$electricityCar->UseFuel();
 ?>
