@@ -21,6 +21,8 @@ class Electricity implements Fuel {
 abstract class Car {
 	protected $fuel;
 	abstract function display();
-	
+	public function UseFuel(Fuel $fuel) {
+		$this->fuel->material();
+	}
 }
 ?>
