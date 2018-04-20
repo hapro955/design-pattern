@@ -17,4 +17,8 @@ class Electricity implements Fuel {
 		echo "use Electricity";
 	}
 }
+
+abstract class Car {
+	protected $fuel;
+}
 ?>
