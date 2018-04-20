@@ -7,4 +7,9 @@ class Gasoline implements Fuel {
 		echo "use Gasoline";
 	}
 }
+class OilDiesel implements Fuel {
+	public function use () {
+		echo "use OilDiesel";
+	}
+}
 ?>
