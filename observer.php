@@ -84,7 +84,7 @@ class Logger implements Observer {
 		$state = $account->getState();
 		$data = $account->getData();
 		if($state == Account::LOGIN_SECCESS) {
-			echo "User ".$data['email']." vua online";
+			echo "User ".$data['email']." online";
 		}
 	}
 }
@@ -94,9 +94,12 @@ class Mailer implements Observer {
 		$state = $account->getState();
 		$data = $account->getData();
 		if($state == Account::EXPIRED) {
-			echo "Account ".$data['email']." da het han";
+			echo "Account ".$data['email']." has expired";
 		}
 	}
 }
 
+class Security implements Observer {
+
+}
 ?>
