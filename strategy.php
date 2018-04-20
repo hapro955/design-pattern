@@ -25,4 +25,13 @@ abstract class Car {
 		$this->fuel->material();
 	}
 }
+
+class GasolineCar extends Car {
+	public function __construct (){
+		$this->fuel = new Gasoline();
+	}
+	public function display() {
+		echo "this is Gasoline Car</br>";
+	}
+}
 ?>
