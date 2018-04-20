@@ -20,5 +20,7 @@ class Electricity implements Fuel {
 
 abstract class Car {
 	protected $fuel;
+	abstract function display();
+	
 }
 ?>
