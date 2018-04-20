@@ -4,17 +4,17 @@ interface Fuel {
 }
 class Gasoline implements Fuel {
 	public function material () {
-		echo "use Gasoline";
+		echo "use Gasoline</br>";
 	}
 }
 class OilDiesel implements Fuel {
 	public function material () {
-		echo "use OilDiesel";
+		echo "use OilDiesel</br>";
 	}
 }
 class Electricity implements Fuel {
 	public function material () {
-		echo "use Electricity";
+		echo "use Electricity</br>";
 	}
 }
 
@@ -42,4 +42,6 @@ class ElectricityCar extends Car {
 		echo "this is Electricity Car</br>";
 	}
 }
+
+
 ?>
