@@ -78,4 +78,7 @@ class Account implements Subject {
 		$this->notify();
 	}
 }
+class Logger implements Observer {
+	
+}
 ?>
