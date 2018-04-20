@@ -12,5 +12,9 @@ class OilDiesel implements Fuel {
 		echo "use OilDiesel";
 	}
 }
-
+class Electricity implements Fuel {
+	public function material () {
+		echo "use Electricity";
+	}
+}
 ?>
