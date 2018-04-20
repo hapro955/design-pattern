@@ -1,6 +1,6 @@
 <?php
 interface Observer {
-	public function update();
+	public function update(Account $account);
 }
 interface Subject {
 	public function attach(Observer $observer);
@@ -65,7 +65,7 @@ class Account implements Subject {
 			'ip' => $ip
 		]);
 		if($email == "hack@gmail.com" && $ip == "10.0.0.1") {
-			$this->setState(Account::LOGIN_IVALID)
+			$this->setState(Account::LOGIN_IVALID);
 		}else {
 			$login = $this->process($email);
 			if($login) {
@@ -90,6 +90,13 @@ class Logger implements Observer {
 }
 
 class Mailer implements Observer {
-	
+	public function update(Account $account) {
+		$state = $account->getState();
+		$data = $account->getData();
+		if($state == Account::EXPIRED) {
+			echo "Account ".$data['email']." da het han";
+		}
+	}
 }
+
 ?>
