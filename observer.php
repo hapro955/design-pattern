@@ -59,5 +59,23 @@ class Account implements Subject {
 		}
 		return false;
 	}
+	public function login ($email, $ip) {
+		$this->setData([
+			'email' => $email,
+			'ip' => $ip
+		]);
+		if($email == "hack@gmail.com" && $ip == "10.0.0.1") {
+			$this->setState(Account::LOGIN_IVALID)
+		}else {
+			$login = $this->process($email);
+			if($login) {
+				$this->setState(Account::LOGIN_SECCESS);
+			}else {
+				$this->setState(Account::LOGIN_FAILURE);
+			}
+
+		}
+		$this->notify();
+	}
 }
 ?>
